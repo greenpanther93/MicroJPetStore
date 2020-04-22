@@ -1,8 +1,8 @@
 # MicroJPetStore
 
-To run this microservice architecture, you must first install docker / docker-compose
+To run this microservice architecture, you must first install [docker](https://docs.docker.com/docker-for-mac/install/) 
 
-1. Build images with docker-compose
+1. Build the images with docker-compose
 
 `docker-compose build`
 
