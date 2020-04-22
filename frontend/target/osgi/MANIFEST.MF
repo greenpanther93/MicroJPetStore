@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Automatic-Module-Name: org.mybatis.jpetstore
-Bnd-LastModified: 1587585520199
-Build-Jdk: 13.0.2
-Built-By: Pascal.ZARAGOZA
+Bnd-LastModified: 1587587085949
+Build-Jdk: 1.8.0_202
+Built-By: pascalzaragoza
 Bundle-Description: The MyBatis parent POM.
 Bundle-DocURL: http://maven.apache.org
 Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
@@ -15,7 +15,7 @@ Created-By: Apache Maven Bundle Plugin
 Export-Package: org.mybatis.jpetstore.mapper;version="1.0.0.SNAPSHOT",or
  g.mybatis.jpetstore.web.actions;version="1.0.0.SNAPSHOT",org.mybatis.jp
  etstore.wrapper;version="1.0.0.SNAPSHOT"
-Implementation-Build-Date: 2020-04-22 19:58:22+0000
+Implementation-Build-Date: 2020-04-22 20:24:08+0000
 Implementation-Title: frontend
 Implementation-URL: http://maven.apache.org
 Implementation-Vendor: MyBatis.org
@@ -29,23 +29,23 @@ Import-Package: com.fasterxml.jackson.databind,com.fasterxml.jackson.dat
  k.http,org.springframework.stereotype,org.springframework.transaction.a
  nnotation,org.springframework.web.bind.annotation,org.springframework.w
  eb.client,org.springframework.web.context
-Include-Resource: {application.properties=src/main/resources/application
- .properties},{database/jpetstore-hsqldb-dataload.sql=src/main/resources
- /database/jpetstore-hsqldb-dataload.sql},{database/jpetstore-hsqldb-sch
- ema.sql=src/main/resources/database/jpetstore-hsqldb-schema.sql},{log4j
- .properties=src/main/resources/log4j.properties},{org/mybatis/jpetstore
- /mapper/AccountMapper.xml=src/main/resources/org/mybatis/jpetstore/mapp
- er/AccountMapper.xml},{org/mybatis/jpetstore/mapper/CategoryMapper.xml=
- src/main/resources/org/mybatis/jpetstore/mapper/CategoryMapper.xml},{or
- g/mybatis/jpetstore/mapper/ItemMapper.xml=src/main/resources/org/mybati
- s/jpetstore/mapper/ItemMapper.xml},{org/mybatis/jpetstore/mapper/LineIt
- emMapper.xml=src/main/resources/org/mybatis/jpetstore/mapper/LineItemMa
- pper.xml},{org/mybatis/jpetstore/mapper/OrderMapper.xml=src/main/resour
- ces/org/mybatis/jpetstore/mapper/OrderMapper.xml},{org/mybatis/jpetstor
- e/mapper/ProductMapper.xml=src/main/resources/org/mybatis/jpetstore/map
- per/ProductMapper.xml},{org/mybatis/jpetstore/mapper/SequenceMapper.xml
- =src/main/resources/org/mybatis/jpetstore/mapper/SequenceMapper.xml},{S
- tripesResources.properties=src/main/resources/StripesResources.properti
+Include-Resource: {database/jpetstore-hsqldb-schema.sql=src/main/resourc
+ es/database/jpetstore-hsqldb-schema.sql},{database/jpetstore-hsqldb-dat
+ aload.sql=src/main/resources/database/jpetstore-hsqldb-dataload.sql},{o
+ rg/mybatis/jpetstore/mapper/OrderMapper.xml=src/main/resources/org/myba
+ tis/jpetstore/mapper/OrderMapper.xml},{org/mybatis/jpetstore/mapper/Seq
+ uenceMapper.xml=src/main/resources/org/mybatis/jpetstore/mapper/Sequenc
+ eMapper.xml},{org/mybatis/jpetstore/mapper/AccountMapper.xml=src/main/r
+ esources/org/mybatis/jpetstore/mapper/AccountMapper.xml},{org/mybatis/j
+ petstore/mapper/ProductMapper.xml=src/main/resources/org/mybatis/jpetst
+ ore/mapper/ProductMapper.xml},{org/mybatis/jpetstore/mapper/ItemMapper.
+ xml=src/main/resources/org/mybatis/jpetstore/mapper/ItemMapper.xml},{or
+ g/mybatis/jpetstore/mapper/CategoryMapper.xml=src/main/resources/org/my
+ batis/jpetstore/mapper/CategoryMapper.xml},{org/mybatis/jpetstore/mappe
+ r/LineItemMapper.xml=src/main/resources/org/mybatis/jpetstore/mapper/Li
+ neItemMapper.xml},{StripesResources.properties=src/main/resources/Strip
+ esResources.properties},{log4j.properties=src/main/resources/log4j.prop
+ erties},{application.properties=src/main/resources/application.properti
  es}
 Private-Package: database
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"

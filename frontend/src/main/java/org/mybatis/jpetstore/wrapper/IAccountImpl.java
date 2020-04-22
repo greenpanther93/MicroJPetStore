@@ -26,8 +26,8 @@ public class IAccountImpl implements IAccount, Proxy {
 
   private ObjectNode xx;
 
-  private String address = "localhost";
-  // private String address = "account";
+  // private String address = "localhost";
+  private String address = "account";
 
   private String port = "8084";
   private String serviceName = "AccountService";

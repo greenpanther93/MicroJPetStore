@@ -25,8 +25,8 @@ public class ICartItemImpl implements ICartItem, Proxy {
 
   private ObjectNode xx;
 
-  private String address = "localhost";
-  // private String address = "order";
+  // private String address = "localhost";
+  private String address = "order";
   private String port = "8082";
   private String serviceName = "CartItemService";
 

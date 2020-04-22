@@ -48,17 +48,17 @@ services:
             - SERVER_HTTP=http://eureka-server:8761/eureka
         networks:
             - network-eureka
-#    frontend:
-#        container_name:
-#            frontend
-#        build: './frontend'
-#        ports:
-#            - "8080:8080"
-#        depends_on:
-#            - eureka-server
-#        environment:
-#            - ACCOUNT_ADR=http://account:8761/eureka
-#            - ORDER_ADR=http://order:8761/eureka
-#            - CATALOG_ADR=http://catalog:8761/eureka
-#        networks:
-#            - network-eureka
+    frontend:
+        container_name:
+            frontend
+        build: './frontend'
+        ports:
+            - "8080:8080"
+        depends_on:
+            - eureka-server
+        environment:
+            - ACCOUNT_ADR=http://account:8761/eureka
+            - ORDER_ADR=http://order:8761/eureka
+            - CATALOG_ADR=http://catalog:8761/eureka
+        networks:
+            - network-eureka

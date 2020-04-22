@@ -33,8 +33,8 @@ public class ICatalogServiceImpl implements ICatalogService, Proxy {
 
   private ObjectNode xx;
 
-  // private String address = "catalog";
-  private String address = "localhost";
+  private String address = "catalog";
+  // private String address = "localhost";
   private String port = "8083";
   private String serviceName = "CatalogServiceService";
 

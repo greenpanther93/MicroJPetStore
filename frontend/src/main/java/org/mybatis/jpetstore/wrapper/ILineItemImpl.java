@@ -10,8 +10,8 @@ public class ILineItemImpl implements ILineItem {
 
   private int lineitem_id;
 
-  private String address = "localhost";
-  // private String address = "order";
+  // private String address = "localhost";
+  private String address = "order";
   private String port = "8082";
   private String serviceName = "LineItemService";
 
