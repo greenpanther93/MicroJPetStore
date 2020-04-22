@@ -35,9 +35,9 @@ public class OrderServiceWebService {
     JsonNode node) {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode return_node = mapper.createObjectNode();
-        IOrderService orderservice = InstanceDatabase.getOrderService(proxy_id);
+//        IOrderService orderservice = InstanceDatabase.getOrderService(proxy_id);
         String name = node.get("name").asText();
-        int return_int = orderservice.getNextId(name);
+        int return_int = orderService.getNextId(name);
         ((ObjectNode)return_node).put("return", return_int);
         return return_node;
     }
@@ -49,9 +49,9 @@ public class OrderServiceWebService {
     JsonNode node) {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode return_node = mapper.createObjectNode();
-        IOrderService orderservice = InstanceDatabase.getOrderService(proxy_id);
+//        IOrderService orderservice = InstanceDatabase.getOrderService(proxy_id);
         int orderId = node.get("orderId").asInt();
-        IOrder return_order = orderservice.getOrder(orderId);
+        IOrder return_order = orderService.getOrder(orderId);
         ((ObjectNode)return_node).put("return", InstanceDatabase.addOrder(return_order));
         return return_node;
     }
@@ -62,9 +62,9 @@ public class OrderServiceWebService {
     JsonNode node) {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode return_node = mapper.createObjectNode();
-        IOrderService orderservice = InstanceDatabase.getOrderService(proxy_id);
+//        IOrderService orderservice = InstanceDatabase.getOrderService(proxy_id);
         String username = node.get("username").asText();
-        List<IOrder> return_list = orderservice.getOrdersByUsername(username);
+        List<IOrder> return_list = orderService.getOrdersByUsername(username);
         ArrayNode return_node_list = mapper.createArrayNode();
         ((ObjectNode)return_node).put("return", return_node_list);
         for (IOrder return_list_element : ((Iterable<IOrder>)return_list)) {
@@ -80,9 +80,9 @@ public class OrderServiceWebService {
     JsonNode node) {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode return_node = mapper.createObjectNode();
-        IOrderService orderservice = InstanceDatabase.getOrderService(proxy_id);
+//        IOrderService orderservice = InstanceDatabase.getOrderService(proxy_id);
         IOrder order = InstanceDatabase.getOrder(node.get("order").asInt());
-        orderservice.insertOrder(order);
+        orderService.insertOrder(order);
         // No need to prepare a void type.;
         return return_node;
     }
