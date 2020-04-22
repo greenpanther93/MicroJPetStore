@@ -666,5 +666,55 @@ public class OrderWebService {
         // No need to prepare a void type.;
         return return_node;
     }
+    
+    // TODO implement addLineItem(CartItem)
+    
+    @PostMapping("/OrderService/{proxy_id}/addLineItem")
+    public JsonNode addLineItem(@PathVariable
+    int proxy_id, @RequestBody
+    JsonNode node) {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode return_node = mapper.createObjectNode();
+        IOrder order = InstanceDatabase.getOrder(proxy_id);
+        ILineItem lineItem = InstanceDatabase.getLineItem(node.get("lineItem").asInt());
+        order.addLineItem(lineItem);
+        // No need to prepare a void type.;
+        return return_node;
+    }
+    
+    @GetMapping("/OrderService/{proxy_id}/getLineItems")
+    public JsonNode getLineItems(@PathVariable
+    int proxy_id) {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode return_node = mapper.createObjectNode();
+        IOrder order = InstanceDatabase.getOrder(proxy_id);
+        List<ILineItem> return_list = order.getLineItems();
+        ArrayNode return_node_list = mapper.createArrayNode();
+        ((ObjectNode)return_node).put("return", return_node_list);
+        for (ILineItem return_list_element : ((Iterable<ILineItem>)return_list)) {
+            return_node_list.add(InstanceDatabase.addLineItem(return_list_element));
+        }
+        return return_node;
+    }
+    
+    @PostMapping("/OrderService/{proxy_id}/setLineItems")
+    public JsonNode setLineItems(@PathVariable
+    int proxy_id, @RequestBody
+    JsonNode node) {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode return_node = mapper.createObjectNode();
+        IOrder order = InstanceDatabase.getOrder(proxy_id);
+        List<ILineItem> lineItems = new java.util.ArrayList();
+        ArrayNode lineItems_array = (ArrayNode) node.get("lineItems");
+        Iterator<JsonNode> lineItems_iterator = lineItems_array.elements();
+        while (lineItems_iterator.hasNext()) {
+            JsonNode lineItems_node = lineItems_iterator.next();
+            ILineItem lineItems_element = InstanceDatabase.getLineItem(lineItems_node.asInt());
+            lineItems.add(lineItems_element);
+        } 
+        order.setLineItems(lineItems);
+        // No need to prepare a void type.;
+        return return_node;
+    }
 }
 

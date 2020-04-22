@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Automatic-Module-Name: org.mybatis.jpetstore
-Bnd-LastModified: 1587512398020
-Build-Jdk: 1.8.0_191
+Bnd-LastModified: 1587585520199
+Build-Jdk: 13.0.2
 Built-By: Pascal.ZARAGOZA
 Bundle-Description: The MyBatis parent POM.
 Bundle-DocURL: http://maven.apache.org
@@ -15,7 +15,7 @@ Created-By: Apache Maven Bundle Plugin
 Export-Package: org.mybatis.jpetstore.mapper;version="1.0.0.SNAPSHOT",or
  g.mybatis.jpetstore.web.actions;version="1.0.0.SNAPSHOT",org.mybatis.jp
  etstore.wrapper;version="1.0.0.SNAPSHOT"
-Implementation-Build-Date: 2020-04-21 23:39:43+0000
+Implementation-Build-Date: 2020-04-22 19:58:22+0000
 Implementation-Title: frontend
 Implementation-URL: http://maven.apache.org
 Implementation-Vendor: MyBatis.org

@@ -34,8 +34,21 @@ public class AccountServiceWebService {
         JsonNode return_node = mapper.createObjectNode();
 //        IAccountService accountservice = InstanceDatabase.getAccountService(proxy_id);
         String username = node.get("username").asText();
+        IAccount return_account = accountService.getAccount(username);
+        ((ObjectNode)return_node).put("return", InstanceDatabase.addAccount(return_account));
+        return return_node;
+    }
+    
+    @PostMapping("/AccountServiceService/{proxy_id}/getAccountWithPassword")
+    public JsonNode getAccountWithPassword(@PathVariable
+    int proxy_id, @RequestBody
+    JsonNode node) {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode return_node = mapper.createObjectNode();
+//        IAccountService accountservice = InstanceDatabase.getAccountService(proxy_id);
+        String username = node.get("username").asText();
         String password = node.get("password").asText();
-        IAccount return_account = accountService.getAccount(username, password);
+        IAccount return_account = accountService.getAccount(username,password);
         ((ObjectNode)return_node).put("return", InstanceDatabase.addAccount(return_account));
         return return_node;
     }

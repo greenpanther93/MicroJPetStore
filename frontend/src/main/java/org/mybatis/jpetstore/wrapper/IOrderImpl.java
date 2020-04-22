@@ -33,7 +33,8 @@ public class IOrderImpl implements IOrder, Proxy {
 
   private ObjectNode xx;
 
-  private String address = "order";
+  // private String address = "order";
+  private String address = "localhost";
   private String port = "8082";
   private String serviceName = "OrderService";
 
@@ -506,6 +507,44 @@ public class IOrderImpl implements IOrder, Proxy {
     ObjectMapper mapper = new ObjectMapper();
     JsonNode param_node = mapper.createObjectNode();
     ((ObjectNode) param_node).put("cartItem", ((Proxy) cartItem).getProxyId());
+    JsonNode return_node = RestTemplateFormatter.sendHTTPRequest(address, port, serviceName, Integer.toString(order_id),
+        "addLineItem", param_node);
+    // No need to prepare a void type.;
+    // void return type, so no return statement.;
+  }
+
+  public void setLineItems(List<ILineItem> lineItems) {
+    ObjectMapper mapper = new ObjectMapper();
+    JsonNode param_node = mapper.createObjectNode();
+    ArrayNode param_node_list = mapper.createArrayNode();
+    ((ObjectNode) param_node).put("lineItems", param_node_list);
+    for (ILineItem lineItems_element : ((Iterable<ILineItem>) lineItems)) {
+      param_node_list.add(((Proxy) lineItems_element).getProxyId());
+    }
+    JsonNode return_node = RestTemplateFormatter.sendHTTPRequest(address, port, serviceName, Integer.toString(order_id),
+        "setLineItems", param_node);
+    // No need to prepare a void type.;
+    // void return type, so no return statement.;
+  }
+
+  public List<ILineItem> getLineItems() {
+    JsonNode return_node = RestTemplateFormatter.sendHTTPRequest(address, port, serviceName, Integer.toString(order_id),
+        "getLineItems", null);
+    List<ILineItem> return_list = new java.util.ArrayList();
+    ArrayNode return_list_array = (ArrayNode) return_node.get("return");
+    Iterator<JsonNode> return_list_iterator = return_list_array.elements();
+    while (return_list_iterator.hasNext()) {
+      JsonNode return_list_node = return_list_iterator.next();
+      ILineItem return_list_element = new ILineItemImpl(return_list_node.asInt());
+      return_list.add(return_list_element);
+    }
+    return return_list;
+  }
+
+  public void addLineItem(ILineItem lineItem) {
+    ObjectMapper mapper = new ObjectMapper();
+    JsonNode param_node = mapper.createObjectNode();
+    ((ObjectNode) param_node).put("lineItem", ((Proxy) lineItem).getProxyId());
     JsonNode return_node = RestTemplateFormatter.sendHTTPRequest(address, port, serviceName, Integer.toString(order_id),
         "addLineItem", param_node);
     // No need to prepare a void type.;

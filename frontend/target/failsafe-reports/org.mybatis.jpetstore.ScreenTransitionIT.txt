@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------
+Test set: org.mybatis.jpetstore.ScreenTransitionIT
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 147.179 s <<< FAILURE! - in org.mybatis.jpetstore.ScreenTransitionIT
+org.mybatis.jpetstore.ScreenTransitionIT.testOrder  Time elapsed: 58.229 s  <<< FAILURE!
+com.codeborne.selenide.ex.ElementShould: 
+Element should be text 'Sub Total: $199.00' {#Cart tr:nth-of-type(4) td}
+Element: '<td colspan="7">Sub Total: $199,00</td>'
+Screenshot: file:/C:/Users/Pascal.ZARAGOZA/eclipse-workspace/000-testprint/frontend/build/reports/tests/org/mybatis/jpetstore/ScreenTransitionIT/emptyMethod/1587585625746.0.png
+Page source: file:/C:/Users/Pascal.ZARAGOZA/eclipse-workspace/000-testprint/frontend/build/reports/tests/org/mybatis/jpetstore/ScreenTransitionIT/emptyMethod/1587585625746.0.html
+Timeout: 10 s.
+	at org.mybatis.jpetstore.ScreenTransitionIT.testOrder(ScreenTransitionIT.java:90)
+
+org.mybatis.jpetstore.ScreenTransitionIT.testLogoContent  Time elapsed: 11.309 s  <<< FAILURE!
+com.codeborne.selenide.ex.InvalidStateException: 
+Invalid element state: Element <area href="Catalog.action?viewCategory=&categoryId=BIRDS"> could not be scrolled into view
+Screenshot: file:/C:/Users/Pascal.ZARAGOZA/eclipse-workspace/000-testprint/frontend/build/reports/tests/org/mybatis/jpetstore/ScreenTransitionIT/emptyMethod/1587585652702.1.png
+Page source: file:/C:/Users/Pascal.ZARAGOZA/eclipse-workspace/000-testprint/frontend/build/reports/tests/org/mybatis/jpetstore/ScreenTransitionIT/emptyMethod/1587585652702.1.html
+Timeout: 10 s.
+Caused by: ElementNotInteractableException: Element <area href="Catalog.action?viewCategory=&categoryId=BIRDS"> could not be scrolled into view
+	at org.mybatis.jpetstore.ScreenTransitionIT.testLogoContent(ScreenTransitionIT.java:407)
+Caused by: org.openqa.selenium.ElementNotInteractableException: 
+Element <area href="Catalog.action?viewCategory=&categoryId=BIRDS"> could not be scrolled into view
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'BLPP-4906', ip: '192.168.0.23', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 75.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200403170909, moz:geckodriverVersion: 0.26.0, moz:headless: true, moz:processID: 14544, moz:profile: C:\Users\Pascal.ZARAGOZA\Ap..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0a4c5536-1409-490d-bdea-7bf3ffe5f281
+	at org.mybatis.jpetstore.ScreenTransitionIT.testLogoContent(ScreenTransitionIT.java:407)
+
+org.mybatis.jpetstore.ScreenTransitionIT.testMainImageContentOnTopPage  Time elapsed: 11.323 s  <<< FAILURE!
+com.codeborne.selenide.ex.InvalidStateException: 
+Invalid element state: Element <area href="Catalog.action?viewCategory=&categoryId=BIRDS"> could not be scrolled into view
+Screenshot: file:/C:/Users/Pascal.ZARAGOZA/eclipse-workspace/000-testprint/frontend/build/reports/tests/org/mybatis/jpetstore/ScreenTransitionIT/emptyMethod/1587585689925.2.png
+Page source: file:/C:/Users/Pascal.ZARAGOZA/eclipse-workspace/000-testprint/frontend/build/reports/tests/org/mybatis/jpetstore/ScreenTransitionIT/emptyMethod/1587585689925.2.html
+Timeout: 10 s.
+Caused by: ElementNotInteractableException: Element <area href="Catalog.action?viewCategory=&categoryId=BIRDS"> could not be scrolled into view
+	at org.mybatis.jpetstore.ScreenTransitionIT.testMainImageContentOnTopPage(ScreenTransitionIT.java:366)
+Caused by: org.openqa.selenium.ElementNotInteractableException: 
+Element <area href="Catalog.action?viewCategory=&categoryId=BIRDS"> could not be scrolled into view
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'BLPP-4906', ip: '192.168.0.23', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 75.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200403170909, moz:geckodriverVersion: 0.26.0, moz:headless: true, moz:processID: 14544, moz:profile: C:\Users\Pascal.ZARAGOZA\Ap..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0a4c5536-1409-490d-bdea-7bf3ffe5f281
+	at org.mybatis.jpetstore.ScreenTransitionIT.testMainImageContentOnTopPage(ScreenTransitionIT.java:366)
+

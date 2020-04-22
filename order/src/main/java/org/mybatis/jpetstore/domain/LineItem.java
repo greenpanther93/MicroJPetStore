@@ -23,6 +23,7 @@ import java.util.function.Function;
 
 import org.mybatis.jpetstore.service.ICartItem;
 import org.mybatis.jpetstore.service.IItem;
+import org.mybatis.jpetstore.service.ILineItem;
 
 
 /**
@@ -30,7 +31,7 @@ import org.mybatis.jpetstore.service.IItem;
  *
  * @author Eduardo Macarron
  */
-public class LineItem implements Serializable {
+public class LineItem implements Serializable, ILineItem {
     private static final long serialVersionUID = 6804536240033522156L;
 
     private int orderId;

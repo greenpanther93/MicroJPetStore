@@ -17,7 +17,9 @@ package org.mybatis.jpetstore.mapper;
 
 
 import java.util.List;
+
 import org.mybatis.jpetstore.domain.LineItem;
+import org.mybatis.jpetstore.service.ILineItem;
 
 
 /**
@@ -28,6 +30,6 @@ import org.mybatis.jpetstore.domain.LineItem;
 public interface LineItemMapper {
     List<LineItem> getLineItemsByOrderId(int orderId);
 
-    void insertLineItem(LineItem lineItem);
+    void insertLineItem(ILineItem lineItem);
 }
 

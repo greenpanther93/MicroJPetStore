@@ -15,6 +15,8 @@
  */
 package org.mybatis.jpetstore.wrapper;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -24,7 +26,9 @@ public class IAccountServiceImpl implements IAccountService, Proxy {
 
   private ObjectNode xx;
 
-  private String address = "account";
+  private String address = "localhost";
+  // private String address = "account";
+
   private String port = "8084";
   private String serviceName = "AccountServiceService";
 
@@ -56,7 +60,7 @@ public class IAccountServiceImpl implements IAccountService, Proxy {
     ((ObjectNode) param_node).put("username", username);
     ((ObjectNode) param_node).put("password", password);
     JsonNode return_node = RestTemplateFormatter.sendHTTPRequest(address, port, serviceName,
-        Integer.toString(accountservice_id), "getAccount", param_node);
+        Integer.toString(accountservice_id), "getAccountWithPassword", param_node);
     IAccount return_account = new IAccountImpl(return_node.get("return").asInt());
     return return_account;
   }

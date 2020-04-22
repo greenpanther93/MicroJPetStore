@@ -26,6 +26,7 @@ import java.util.List;
 import org.mybatis.jpetstore.service.IAccount;
 import org.mybatis.jpetstore.service.ICart;
 import org.mybatis.jpetstore.service.ICartItem;
+import org.mybatis.jpetstore.service.ILineItem;
 import org.mybatis.jpetstore.service.IOrder;
 
 
@@ -89,7 +90,7 @@ public class Order implements Serializable , IOrder {
 
     private String status;
 
-    private List<LineItem> lineItems = new ArrayList<>();
+    private List<ILineItem> lineItems = new ArrayList<>();
 
     public int getOrderId() {
         return orderId;
@@ -299,11 +300,11 @@ public class Order implements Serializable , IOrder {
         this.status = status;
     }
 
-    public void setLineItems(List<LineItem> lineItems) {
+    public void setLineItems(List<ILineItem> lineItems) {
         this.lineItems = lineItems;
     }
 
-    public List<LineItem> getLineItems() {
+    public List<ILineItem> getLineItems() {
         return lineItems;
     }
 
@@ -353,7 +354,7 @@ public class Order implements Serializable , IOrder {
         addLineItem(lineItem);
     }
 
-    public void addLineItem(LineItem lineItem) {
+    public void addLineItem(ILineItem lineItem) {
         lineItems.add(lineItem);
     }
 }

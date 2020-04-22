@@ -38,6 +38,9 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 public class OrderService implements IOrderService {
+	
+	// FIX commented out itemMapper as it should be a webservice instead
+	// ignored for now as it is a dbb connection problem, not a migration problem
 //    private final ItemMapper itemMapper;
 
     private final OrderMapper orderMapper;
@@ -89,7 +92,7 @@ public class OrderService implements IOrderService {
     @Transactional
     public IOrder getOrder(int orderId) {
         IOrder order = orderMapper.getOrder(orderId);
-        order.setLineItems(lineItemMapper.getLineItemsByOrderId(orderId));
+        order.setLineItems((List<ILineItem>)(List<?>)lineItemMapper.getLineItemsByOrderId(orderId));
         order.getLineItems().forEach(( lineItem) -> {
 //            IItem item = itemMapper.getItem(lineItem.getItemId());
 //            item.setQuantity(itemMapper.getInventoryQuantity(lineItem.getItemId()));

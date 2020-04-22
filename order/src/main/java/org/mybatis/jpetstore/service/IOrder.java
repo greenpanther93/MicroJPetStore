@@ -112,14 +112,14 @@ public interface IOrder {
 
     public void setStatus(String status);
 
-    public void setLineItems(List<LineItem> lineItems);
+    public void setLineItems(List<ILineItem> lineItems);
 
-    public List<LineItem> getLineItems();
+    public List<ILineItem> getLineItems();
 
     public void initOrder(IAccount account, ICart cart);
 
     public void addLineItem(ICartItem cartItem);
 
-    public void addLineItem(LineItem lineItem);
+    public void addLineItem(ILineItem lineItem);
 }
 

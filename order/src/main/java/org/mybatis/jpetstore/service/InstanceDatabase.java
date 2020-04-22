@@ -13,6 +13,8 @@ public class InstanceDatabase {
 
     private static List<ICart> carts = new java.util.ArrayList<ICart>();
 
+    private static List<ILineItem> lineitems = new java.util.ArrayList<ILineItem>();
+
     public static int addCart(ICart cart) {
         carts.add(cart);
         return carts.size()-1;
@@ -47,6 +49,15 @@ public class InstanceDatabase {
 
     public static ICartItem getCartItem(int index) {
         return cartitems.get(index);
+    }
+
+	public static int addLineItem(ILineItem lineItem) {
+		lineitems.add(lineItem);
+		return lineitems.size()-1;
+	}
+	
+	public static ILineItem getLineItem(int index) {
+        return lineitems.get(index);
     }
 }
 
