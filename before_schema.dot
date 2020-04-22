@@ -1,0 +1,1787 @@
+strict digraph MSA {
+
+	 subgraph cluster_frontend {
+
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+
+		frontend_AbstractActionBean[label = AbstractActionBean];
+		frontend_AccountActionBean[label = AccountActionBean];
+		frontend_CartActionBean[label = CartActionBean];
+		frontend_CatalogActionBean[label = CatalogActionBean];
+		frontend_OrderActionBean[label = OrderActionBean];
+
+		label = "frontend";
+
+	}
+
+
+
+	 subgraph cluster_order {
+
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+
+		order_OrderService[label = OrderService];
+		order_LineItemMapper[label = LineItemMapper];
+		order_OrderMapper[label = OrderMapper];
+		order_SequenceMapper[label = SequenceMapper];
+		order_LineItem[label = LineItem];
+		order_Order[label = Order];
+		order_Sequence[label = Sequence];
+		order_CartItem[label = CartItem];
+		order_Cart[label = Cart];
+
+		label = "order";
+
+	}
+
+
+
+	 subgraph cluster_catalog {
+
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+
+		catalog_CatalogService[label = CatalogService];
+		catalog_CategoryMapper[label = CategoryMapper];
+		catalog_ItemMapper[label = ItemMapper];
+		catalog_ProductMapper[label = ProductMapper];
+		catalog_Category[label = Category];
+		catalog_Item[label = Item];
+		catalog_Product[label = Product];
+
+		label = "catalog";
+
+	}
+
+
+
+	 subgraph cluster_account {
+
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+
+		account_AccountService[label = AccountService];
+		account_AccountMapper[label = AccountMapper];
+		account_Account[label = Account];
+
+		label = "account";
+
+	}
+
+
+
+frontend_AccountActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> account_AccountService [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> catalog_CatalogService [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> account_Account [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_CartActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> catalog_CatalogService [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CatalogActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> catalog_CatalogService [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Category [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_OrderActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> order_OrderService [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> order_Cart null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> order_Cart null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_CartActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_AccountActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> account_AccountService [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> catalog_CatalogService [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> account_Account [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_CartActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> catalog_CatalogService [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CatalogActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> catalog_CatalogService [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Category [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_OrderActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> order_OrderService [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> order_Cart null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> order_Cart null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_CartActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_AccountActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> account_AccountService [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> catalog_CatalogService [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> account_Account [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account [dir="forward" arrowhead="vee" label="uses"];
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_AccountService null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_CatalogService null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_AbstractActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> frontend_CatalogActionBean null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> account_Account null
+frontend_AccountActionBean -> catalog_Product null
+frontend_AccountActionBean -> catalog_Product null
+frontend_CartActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> catalog_CatalogService [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_CatalogService null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> frontend_AbstractActionBean null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> catalog_Item null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_CartItem null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CartActionBean -> order_Cart null
+frontend_CatalogActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> catalog_CatalogService [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Category [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> frontend_AbstractActionBean null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_CatalogService null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Category null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Product null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_CatalogActionBean -> catalog_Item null
+frontend_OrderActionBean -> frontend_AbstractActionBean [dir="forward" arrowhead="normal"];
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> order_OrderService [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> order_Cart null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> order_Cart null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_CartActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_CartActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean [dir="forward" arrowhead="vee" label="uses"];
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_OrderService null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> frontend_AccountActionBean null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> account_Account null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> frontend_AbstractActionBean null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+frontend_OrderActionBean -> order_Order null
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItem null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_Item null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> catalog_Item null
+order_OrderService -> catalog_Item null
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> catalog_Item null
+order_OrderService -> catalog_Item null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Order null
+order_OrderService -> order_Sequence [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_LineItemMapper -> order_LineItem [dir="forward" arrowhead="normal"];
+order_LineItemMapper -> order_LineItem [dir="forward" arrowhead="normal"];
+order_OrderMapper -> order_Order [dir="forward" arrowhead="normal"];
+order_OrderMapper -> order_Order [dir="forward" arrowhead="normal"];
+order_OrderMapper -> order_Order [dir="forward" arrowhead="normal"];
+order_OrderMapper -> order_Order [dir="forward" arrowhead="normal"];
+order_SequenceMapper -> order_Sequence [dir="forward" arrowhead="normal"];
+order_SequenceMapper -> order_Sequence [dir="forward" arrowhead="normal"];
+order_SequenceMapper -> order_Sequence [dir="forward" arrowhead="normal"];
+order_LineItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_LineItem -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_LineItem -> order_CartItem null
+order_LineItem -> order_CartItem null
+order_LineItem -> order_CartItem null
+order_LineItem -> order_CartItem null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> order_CartItem null
+order_LineItem -> order_CartItem null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> order_CartItem null
+order_LineItem -> order_CartItem null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> account_Account [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> order_Cart [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> order_Cart null
+order_Order -> order_Cart null
+order_Order -> order_CartItem null
+order_Order -> order_Cart null
+order_Order -> order_Cart null
+order_Order -> order_CartItem null
+order_Order -> order_CartItem null
+order_Order -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> order_CartItem null
+order_Order -> order_CartItem null
+order_Order -> order_CartItem null
+order_Order -> order_CartItem null
+order_Order -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> order_LineItem [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_CartItem null
+order_Order -> order_LineItem null
+order_Order -> order_CartItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_CartItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_CartItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item null
+order_Cart -> catalog_Item null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item null
+order_Cart -> catalog_Item null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item null
+order_Cart -> catalog_Item null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item null
+order_Cart -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item null
+order_Cart -> catalog_Item null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_Order [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItem null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_Item null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> catalog_Item null
+order_OrderService -> catalog_Item null
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> order_LineItem null
+order_OrderService -> catalog_Item null
+order_OrderService -> catalog_Item null
+order_OrderService -> order_Order null
+order_OrderService -> order_Order null
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_OrderMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Order null
+order_OrderService -> order_Sequence [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence [dir="forward" arrowhead="vee" label="uses"];
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_SequenceMapper [dir="forward" arrowhead="normal"];
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_OrderService -> order_Sequence null
+order_LineItemMapper -> order_LineItem [dir="forward" arrowhead="normal"];
+order_LineItemMapper -> order_LineItem [dir="forward" arrowhead="normal"];
+order_OrderMapper -> order_Order [dir="forward" arrowhead="normal"];
+order_OrderMapper -> order_Order [dir="forward" arrowhead="normal"];
+order_OrderMapper -> order_Order [dir="forward" arrowhead="normal"];
+order_OrderMapper -> order_Order [dir="forward" arrowhead="normal"];
+order_SequenceMapper -> order_Sequence [dir="forward" arrowhead="normal"];
+order_SequenceMapper -> order_Sequence [dir="forward" arrowhead="normal"];
+order_SequenceMapper -> order_Sequence [dir="forward" arrowhead="normal"];
+order_LineItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_LineItem -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_LineItem -> order_CartItem null
+order_LineItem -> order_CartItem null
+order_LineItem -> order_CartItem null
+order_LineItem -> order_CartItem null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> order_CartItem null
+order_LineItem -> order_CartItem null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> order_CartItem null
+order_LineItem -> order_CartItem null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_LineItem -> catalog_Item null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> account_Account [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> order_Cart [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> account_Account null
+order_Order -> order_Cart null
+order_Order -> order_Cart null
+order_Order -> order_CartItem null
+order_Order -> order_Cart null
+order_Order -> order_Cart null
+order_Order -> order_CartItem null
+order_Order -> order_CartItem null
+order_Order -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> order_CartItem null
+order_Order -> order_CartItem null
+order_Order -> order_CartItem null
+order_Order -> order_CartItem null
+order_Order -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> order_LineItem [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_CartItem null
+order_Order -> order_LineItem null
+order_Order -> order_CartItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_Order -> order_LineItem [dir="forward" arrowhead="vee" label="uses"];
+order_Order -> order_LineItem null
+order_Order -> order_LineItem null
+order_CartItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_CartItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_CartItem -> catalog_Item null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item null
+order_Cart -> catalog_Item null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item null
+order_Cart -> catalog_Item null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item null
+order_Cart -> catalog_Item null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item null
+order_Cart -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem [dir="forward" arrowhead="vee" label="uses"];
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+order_Cart -> catalog_Item null
+order_Cart -> catalog_Item null
+order_Cart -> order_CartItem null
+order_Cart -> order_CartItem null
+catalog_CatalogService -> catalog_CategoryMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ProductMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_CategoryMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ProductMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_CategoryMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_CategoryMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_CategoryMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ProductMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ProductMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ProductMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_Category null
+catalog_CatalogService -> catalog_CategoryMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_CategoryMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_Category null
+catalog_CatalogService -> catalog_Category [dir="forward" arrowhead="vee" label="uses"];
+catalog_CatalogService -> catalog_CategoryMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_CategoryMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_Category null
+catalog_CatalogService -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+catalog_CatalogService -> catalog_ProductMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ProductMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_Product null
+catalog_CatalogService -> catalog_Product null
+catalog_CatalogService -> catalog_ProductMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ProductMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_Product null
+catalog_CatalogService -> catalog_Product null
+catalog_CatalogService -> catalog_Product null
+catalog_CatalogService -> catalog_Product null
+catalog_CatalogService -> catalog_Product null
+catalog_CatalogService -> catalog_ProductMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ProductMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_Product null
+catalog_CatalogService -> catalog_Product null
+catalog_CatalogService -> catalog_Item null
+catalog_CatalogService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_Item null
+catalog_CatalogService -> catalog_Item [dir="forward" arrowhead="vee" label="uses"];
+catalog_CatalogService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_Item null
+catalog_CatalogService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+catalog_CatalogService -> catalog_ItemMapper [dir="forward" arrowhead="normal"];
+catalog_CategoryMapper -> catalog_Category [dir="forward" arrowhead="normal"];
+catalog_CategoryMapper -> catalog_Category [dir="forward" arrowhead="normal"];
+catalog_ItemMapper -> catalog_Item [dir="forward" arrowhead="normal"];
+catalog_ItemMapper -> catalog_Item [dir="forward" arrowhead="normal"];
+catalog_ProductMapper -> catalog_Product [dir="forward" arrowhead="normal"];
+catalog_ProductMapper -> catalog_Product [dir="forward" arrowhead="normal"];
+catalog_ProductMapper -> catalog_Product [dir="forward" arrowhead="normal"];
+catalog_Item -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+catalog_Item -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+catalog_Item -> catalog_Product null
+catalog_Item -> catalog_Product [dir="forward" arrowhead="vee" label="uses"];
+catalog_Item -> catalog_Product null
+catalog_Item -> catalog_Product null
+catalog_Item -> catalog_Product null
+catalog_Item -> catalog_Product null
+catalog_Item -> catalog_Product null
+	label = "MSA architecture";
+
+	}
